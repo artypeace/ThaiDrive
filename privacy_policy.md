@@ -43,7 +43,7 @@ We may employ third party companies and individuals to facilitate our Service ("
 ### Analytics 
 We may use third-party Service Providers to monitor and analyze the use of our Service. 
 #### Firebase 
-Firebase is analytics service provided by Google Inc. You may opt-out of certain Firebase features through your mobile device settings, such as your device advertising settings or by following the instructions provided by Google in their Privacy Policy: https://policies.google.com/privacy?hl=en. We also encourage you to review the Google's policy for safeguarding your data: https:// support.google.com/analytics/answer/6004245. For more information on what type of information Firebase collects, please visit please visit the Google Privacy & Terms web page: https:// policies.google.com/privacy?hl=en 
+Firebase is analytics service provided by Google Inc. You may opt-out of certain Firebase features through your mobile device settings, such as your device advertising settings or by following the instructions provided by Google in their Privacy Policy: https://policies.google.com/privacy?hl=en. We also encourage you to review the Google's policy for safeguarding your data: https://support.google.com/analytics/answer/6004245. For more information on what type of information Firebase collects, please visit please visit the Google Privacy & Terms web page: https://policies.google.com/privacy?hl=en 
 ### Links To Other Sites 
 Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services. 
 ### Children's Privacy 
@@ -53,5 +53,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. 
 #### Contact Us 
 If you have any questions about this Privacy Policy, please contact us: 
-* By email: 
-1arty4u@gmail.com 
+By email: 1arty4u@gmail.com 
