@@ -17,7 +17,7 @@ At some point, we may wish to update the app. The app is currently available on 
 
 Do not use the app for time-sensitive or mission-critical uses, such as medical, military, industrial or other use which may require high availability and real-time data. For no case and for no reason shall we be held liable for any damage, direct or indirect, consequential, exemplary, physical or special, to you, any other user or any third party due to its misperformance of duties herein. We provide Service on an AS-IS basis and shall not be held liable, to the extent permitted by law, by any case of misconduct, negligence, gross negligence, malice or any other mean, to any damages or loss of property, including loss of your funds, damages to property, reputation and business reputation, loss of profit, loss of good name, all resulting from the use or inability to use services.
 
-###Changes to This Terms and Conditions
+### Changes to This Terms and Conditions
 
 We may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Terms and Conditions on this page.
 
