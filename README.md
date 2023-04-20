@@ -54,4 +54,5 @@ We will let you know via email and/or a prominent notice on our Service, prior t
 #### Contact Us 
 If you have any questions about this Privacy Policy, please contact us: 
 * By email: 
-1arty4u@gmail.com 
+thaidriveapp@gmail.com
+ 
