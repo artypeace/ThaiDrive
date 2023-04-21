@@ -25,5 +25,5 @@ These terms and conditions are effective as of 2023-03-24
 
 Contact Us
 
-If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at 1arty4u@gmail.com.
+If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at thaidriveapp@gmail.com.
 
