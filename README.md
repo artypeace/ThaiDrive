@@ -1,58 +1,129 @@
-# Privacy Policy 
-Effective date: March 24, 2023
-Thai Drive App ("us", "we", or "our") operates the Thai Drive App mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy for Thai Drive App is managed through Free Privacy Policy. We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions. 
-## Information Collection And Use
-We collect several different types of information for various purposes to provide and improve our Service to you.
-## Types of Data Collected
-### Personal Data
-While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to: 
-* Cookies and Usage Data 
-### Usage Data 
-When you access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data ("Usage Data").
-### Tracking & Cookies Data
-We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. Examples of Cookies we use: 
-* Session Cookies. We use Session Cookies to operate our Service. 
-* Preference Cookies. We use Preference Cookies to remember your preferences and various settings. 
-* Security Cookies. We use Security Cookies for security purposes. 
-### Use of Data
-#### ThaiDrive uses the collected data for various purposes: 
-* To provide and maintain the Service 
-* To notify you about changes to our Service 
-* To allow you to participate in interactive features of our Service when you choose to do so 
-* To provide customer care and support 
-* To provide analysis or valuable information so that we can improve the Service 
-* To monitor the usage of the Service 
-* To detect, prevent and address technical issues
-### Transfer Of Data
-Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction. If you are located outside Thailand and choose to provide information to us, please note that we transfer the data, including Personal Data, to the Kingdom of Thailand and process it there. 
-￼
- 
-Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer. ThaiDrive App will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information. 
-### Disclosure Of Data
-## Legal Requirements
-Thai Drive App may disclose your Personal Data in the good faith belief that such action is necessary to: 
-* To comply with a legal obligation 
-* To protect and defend the rights or property of Thai Drive App 
-* To prevent or investigate possible wrongdoing in connection with the Service 
-* To protect the personal safety of users of the Service or the public 
-* To protect against legal liability
-### Security Of Data 
-The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security. 
-### Service Providers 
-We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
-### Analytics 
-We may use third-party Service Providers to monitor and analyze the use of our Service. 
-#### Firebase 
-Firebase is analytics service provided by Google Inc. You may opt-out of certain Firebase features through your mobile device settings, such as your device advertising settings or by following the instructions provided by Google in their Privacy Policy: https://policies.google.com/privacy?hl=en. We also encourage you to review the Google's policy for safeguarding your data: https:// support.google.com/analytics/answer/6004245. For more information on what type of information Firebase collects, please visit please visit the Google Privacy & Terms web page: https:// policies.google.com/privacy?hl=en 
-### Links To Other Sites 
-Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services. 
-### Children's Privacy 
-Our Service does not address anyone under the age of 18 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.
-### Changes To This Privacy Policy
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.  
-We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. 
-#### Contact Us 
-If you have any questions about this Privacy Policy, please contact us: 
-* By email: 
+# Thai Drive Privacy Policy
+
+**Effective date:** 7 November 2026
+
+This policy covers version 3.0 of the Thai Drive apps for iPhone and iPad: "Thailand Driver License" (English) and "สอบใบขับขี่ ไทยไดรฟ์" (Thai). Thai Drive is an independent study app. It is not affiliated with the Department of Land Transport.
+
+[Read the previous policy for earlier versions](https://github.com/artypeace/ThaiDrive/blob/3e9f890b1de063a00cabd535f697eeaef1037143/README.md).
+
+## What stays on your device
+
+Your practice answers, saved questions, exam appointment, office details, checklists, app settings and sign-scan history are stored on your device. Exam reminders are scheduled on the device. Thai Drive has no user accounts. You can clear study statistics in Settings and delete scans in AI Helper history. Deleting the app removes its local data.
+
+## Sign recognition
+
+Sign recognition is optional. You can allow AI sharing during the welcome tour or when you first use an AI feature. When you scan a sign, the photo is reduced in size and sent over HTTPS through our Supabase backend to OpenAI, which identifies the sign. The photo and result are saved in your history on your device. Our backend does not keep the photo. You can withdraw permission under Settings → Privacy and data. Thai Drive will ask again before sharing data for AI analysis.
+
+Please photograph only the road sign and avoid faces, number plates or other personal details.
+
+## Study explanations
+
+When you confirm an AI explanation, the app sends the question identifier and the number of the option you chose to our backend. OpenAI receives the question, your chosen option, the correct option and any reviewed rule available. It does not receive your Apple purchase proof.
+
+Practice question lookup from a photo takes place on your device. When you choose AI analysis after allowing AI sharing, the app sends a reduced copy of the photo through our Supabase backend to OpenAI. Include only the question, its choices and any diagram. Our backend keeps a hash of the submitted image and the completed AI answer for repeat requests. It does not save the photo.
+
+## Purchases and AI usage
+
+Apple processes payments. We do not receive your card details. The app uses StoreKit to check Premium purchases. For study explanations, our backend uses a pseudonymous Apple app transaction identifier to enforce usage limits and save completed explanations for reuse. This also applies to free explanations. Records of previously issued explanation credits and related purchase events may be retained.
+
+## Support and question reports
+
+If you report a question, the app prepares a draft with the question and its reference number, app version, your chosen reason and any comment you add. You choose whether to send it. If you email support, we receive the information you send and your email address so we can respond.
+
+## Limiting abuse
+
+The sign-recognition service keeps a keyed hash of your network address and a short-lived request count to limit abuse. The service removes records older than one hour when it processes another scan.
+
+## Service providers
+
+- **Apple** processes purchases and app distribution.
+- **Supabase** hosts our backend functions and may keep service logs.
+- **OpenAI** processes photos and explanation requests. We send these requests with storage turned off. OpenAI may retain abuse-monitoring logs under its [API data policy](https://developers.openai.com/api/docs/guides/your-data). The default is up to 30 days, with exceptions described in that policy.
+
+We do not sell your data.
+
+## Ads and tracking
+
+Thai Drive 3.0 shows no ads and does not contain advertising SDKs. It does not track you across other companies' apps or websites.
+
+## Children
+
+Thai Drive is designed for people preparing for a driving licence and is not directed at children.
+
+## Your choices and requests
+
+You can decline AI uploads and still use the practice questions. To ask about your data or request deletion of server records, email thaidriveapp@gmail.com. Because we have no accounts, we may ask for a purchase receipt or similar detail to find the record.
+
+## Changes
+
+We will update this page when these practices change and revise the effective date above.
+
+## Contact
+
 thaidriveapp@gmail.com
- 
+
+---
+
+# นโยบายความเป็นส่วนตัวของ Thai Drive
+
+**วันที่มีผลบังคับใช้:** 7 พฤศจิกายน 2569
+
+นโยบายนี้ครอบคลุมแอป Thai Drive เวอร์ชัน 3.0 สำหรับ iPhone และ iPad ทั้งเวอร์ชันภาษาอังกฤษ "Thailand Driver License" และเวอร์ชันภาษาไทย "สอบใบขับขี่ ไทยไดรฟ์" Thai Drive เป็นแอปเตรียมสอบอิสระ ไม่ได้สังกัดกรมการขนส่งทางบก
+
+[อ่านนโยบายเดิมสำหรับแอปเวอร์ชันก่อนหน้า](https://github.com/artypeace/ThaiDrive/blob/3e9f890b1de063a00cabd535f697eeaef1037143/README.md).
+
+## ข้อมูลที่อยู่ในอุปกรณ์ของคุณ
+
+คำตอบที่ฝึก คำถามที่บันทึกไว้ เวลานัดสอบ ข้อมูลสำนักงาน รายการเตรียมเอกสาร การตั้งค่าแอป และประวัติการสแกนป้ายจะเก็บไว้ในอุปกรณ์ของคุณ การแจ้งเตือนวันสอบตั้งค่าบนอุปกรณ์ Thai Drive ไม่มีระบบบัญชีผู้ใช้ คุณล้างสถิติการเรียนได้ในการตั้งค่า และลบการสแกนได้ในประวัติของผู้ช่วย AI การลบแอปจะลบข้อมูลที่แอปเก็บไว้ในอุปกรณ์
+
+## การสแกนป้ายจราจร
+
+การสแกนป้ายเป็นตัวเลือกเสริม คุณอนุญาตให้แชร์ข้อมูลกับ AI ได้ในหน้าแนะนำหรือเมื่อใช้ฟีเจอร์ AI ครั้งแรก เมื่อคุณสแกนป้าย รูปจะถูกลดขนาดและส่งผ่าน HTTPS ผ่านเซิร์ฟเวอร์ Supabase ของเราไปยัง OpenAI เพื่อระบุป้าย รูปและผลลัพธ์จะบันทึกในประวัติบนอุปกรณ์ของคุณ เซิร์ฟเวอร์ของเราไม่เก็บรูปนั้นไว้ คุณถอนความยินยอมได้ที่ การตั้งค่า → ความเป็นส่วนตัวและข้อมูล แอปจะขออนุญาตอีกครั้งก่อนส่งข้อมูลให้ AI
+
+โปรดถ่ายเฉพาะป้ายจราจร และหลีกเลี่ยงใบหน้า ป้ายทะเบียนรถ หรือข้อมูลส่วนบุคคลอื่น
+
+## คำอธิบายข้อสอบ
+
+เมื่อคุณยืนยันให้ AI อธิบายคำตอบ แอปจะส่งรหัสคำถามและหมายเลขตัวเลือกที่คุณตอบไปยังเซิร์ฟเวอร์ของเรา OpenAI จะได้รับโจทย์ ตัวเลือกที่คุณตอบ ตัวเลือกที่ถูกต้อง และกฎที่ตรวจสอบแล้วหากมี โดยไม่ได้รับหลักฐานการซื้อจาก Apple
+
+การค้นหาโจทย์ฝึกจากรูปทำงานในอุปกรณ์ของคุณ เมื่อเลือกให้ AI วิเคราะห์หลังจากอนุญาตให้แชร์ข้อมูลแล้ว แอปจะส่งรูปที่ลดขนาดแล้วผ่านเซิร์ฟเวอร์ Supabase ของเราไปยัง OpenAI โปรดให้มีเฉพาะโจทย์ ตัวเลือก และภาพประกอบ เซิร์ฟเวอร์ของเราบันทึกค่าแฮชของรูปและคำตอบที่ AI สร้างไว้สำหรับคำขอซ้ำ โดยไม่บันทึกรูป
+
+## การซื้อและการใช้งาน AI
+
+Apple ดำเนินการชำระเงิน เราไม่ได้รับข้อมูลบัตรของคุณ แอปใช้ StoreKit เพื่อตรวจสอบสิทธิ์พรีเมียม สำหรับคำอธิบายข้อสอบ เซิร์ฟเวอร์ใช้รหัสธุรกรรมแอปจาก Apple ที่ไม่แสดงชื่อเพื่อจำกัดจำนวนครั้งและบันทึกคำอธิบายที่สร้างแล้วไว้ใช้ซ้ำ รวมถึงคำอธิบายฟรี เราอาจเก็บข้อมูลเครดิตที่เคยได้รับและรายการซื้อที่เกี่ยวข้องไว้
+
+## การติดต่อและแจ้งปัญหาข้อสอบ
+
+เมื่อคุณแจ้งปัญหา แอปจะเตรียมแบบร่างที่มีคำถาม รหัสข้อสอบ เวอร์ชันแอป เหตุผลที่เลือก และความคิดเห็นที่คุณเพิ่ม คุณเป็นผู้เลือกว่าจะส่งหรือไม่ หากติดต่อเราทางอีเมล เราจะได้รับข้อมูลที่คุณส่งและที่อยู่อีเมลเพื่อใช้ตอบกลับ
+
+## การป้องกันการใช้งานในทางที่ผิด
+
+บริการสแกนป้ายจะเก็บค่าแฮชแบบใช้กุญแจของที่อยู่เครือข่ายและตัวนับคำขอชั่วคราวเพื่อป้องกันการใช้งานในทางที่ผิด ระบบจะลบบันทึกที่มีอายุเกินหนึ่งชั่วโมงเมื่อประมวลผลการสแกนครั้งถัดไป
+
+## ผู้ให้บริการ
+
+- **Apple** ดำเนินการเรื่องการซื้อและการเผยแพร่แอป
+- **Supabase** ให้บริการฟังก์ชันเซิร์ฟเวอร์ และอาจเก็บบันทึกการให้บริการ
+- **OpenAI** ประมวลผลรูปและคำขอคำอธิบาย เราส่งคำขอโดยปิดการจัดเก็บ OpenAI อาจเก็บบันทึกเพื่อตรวจสอบการใช้งานในทางที่ผิดตาม[นโยบายข้อมูล API](https://developers.openai.com/api/docs/guides/your-data) โดยปกติเก็บไว้สูงสุด 30 วัน และมีข้อยกเว้นตามนโยบายดังกล่าว
+
+เราไม่ขายข้อมูลของคุณ
+
+## โฆษณาและการติดตาม
+
+Thai Drive 3.0 ไม่แสดงโฆษณาและไม่มี SDK โฆษณา และไม่ติดตามคุณข้ามแอปหรือเว็บไซต์ของบริษัทอื่น
+
+## เด็ก
+
+Thai Drive ออกแบบมาสำหรับผู้ที่เตรียมสอบใบขับขี่ และไม่ได้มุ่งเป้าไปที่เด็ก
+
+## ทางเลือกและคำขอของคุณ
+
+คุณปฏิเสธการอัปโหลดไปยัง AI และยังใช้คำถามฝึกได้ หากต้องการสอบถามเกี่ยวกับข้อมูลหรือขอลบข้อมูลบนเซิร์ฟเวอร์ โปรดส่งอีเมลถึง thaidriveapp@gmail.com เนื่องจากแอปไม่มีระบบบัญชี เราอาจขอใบเสร็จการซื้อหรือรายละเอียดที่คล้ายกันเพื่อค้นหาข้อมูล
+
+## การเปลี่ยนแปลง
+
+เราจะปรับปรุงหน้านี้และวันที่มีผลบังคับใช้ด้านบนเมื่อแนวทางเหล่านี้เปลี่ยนแปลง
+
+## ติดต่อ
+
+thaidriveapp@gmail.com
