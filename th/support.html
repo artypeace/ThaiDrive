@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ช่วยเหลือ ไทยไดรฟ์</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ความช่วยเหลือสำหรับแอปไทยไดรฟ์: แจ้งปัญหาข้อสอบ กู้คืนพรีเมียม จัดการพรีเมียมรายสัปดาห์ การอนุญาต AI ความคืบหน้า และการแจ้งเตือน">
+<link rel="alternate" hreflang="en" href="https://artypeace.github.io/ThaiDrive/support">
+<link rel="alternate" hreflang="th" href="https://artypeace.github.io/ThaiDrive/th/support">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one reading column on lavender; a short heroine header, a "the short version" panel, then dark text cards per topic. */
+:root {
+  --page: #ECEAFB;          /* app lavender ground */
+  --page-ink: #261A3D;      /* headings on the ground */
+  --page-soft: #5A5470;     /* secondary text on the ground */
+  --card: #231B36;          /* dark text cards */
+  --card-ink: #EAE7F2;      /* text on cards */
+  --card-soft: #B9B3CC;     /* secondary text on cards */
+  --card-line: #3A3053;
+  --accent: #6C68E2;        /* brand lavender action */
+  --accent-ink: #FFFFFF;
+  --accent-on-card: #A9A6FF;
+  --panel: #6C68E2;         /* summary panel */
+  --panel-ink: #FFFFFF;
+  --vespa: #FFC928;         /* the heroine's scooter */
+  --chip: #FFFFFF;
+  --chip-ink: #3F3A8F;
+  --mark: #FFE7A3;
+  --mark-ink: #4A3600;
+  --font: "Anuphan", "Noto Sans Thai", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #141020; --page-ink: #EAE7F2; --page-soft: #A9A3BD;
+    --card: #221B33; --card-ink: #EAE7F2; --card-soft: #B3ADC6; --card-line: #382E50;
+    --accent: #FFC928; --accent-ink: #1A1606; --accent-on-card: #B8B5FF; --panel: #4E49B8; --panel-ink: #FFFFFF;
+    --chip: #2A2240; --chip-ink: #D6D4FF; --mark: #5A4500; --mark-ink: #FFE7A3;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #141020; --page-ink: #EAE7F2; --page-soft: #A9A3BD;
+  --card: #221B33; --card-ink: #EAE7F2; --card-soft: #B3ADC6; --card-line: #382E50;
+  --accent: #FFC928; --accent-ink: #1A1606; --accent-on-card: #B8B5FF; --panel: #4E49B8; --panel-ink: #FFFFFF;
+  --chip: #2A2240; --chip-ink: #D6D4FF; --mark: #5A4500; --mark-ink: #FFE7A3;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--page); color: var(--page-ink);
+  font-family: var(--font); font-size: 17px; line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.wrap { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
+a { color: var(--accent-on-card); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--vespa); outline-offset: 2px; border-radius: 6px; }
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 18px 0; }
+.brand { font-weight: 700; font-size: 15px; letter-spacing: .02em; color: var(--page-ink); text-decoration: none; }
+.brand span { color: var(--page-soft); font-weight: 500; }
+.lang { display: inline-flex; background: var(--chip); border-radius: 999px; padding: 4px; gap: 2px; }
+.lang a { white-space: nowrap; color: var(--chip-ink); text-decoration: none; font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; min-height: 32px; display: inline-flex; align-items: center; }
+.lang a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 210px; align-items: end; gap: 8px; padding-block: 10px 0; }
+.hero h1 { font-size: clamp(34px, 7vw, 50px); line-height: 1.05; margin: 0 0 12px; font-weight: 700; text-wrap: balance; letter-spacing: -.01em; }
+.hero p { margin: 0; color: var(--page-soft); max-width: 46ch; }
+.hero .dates { margin-top: 14px; font-size: 14px; color: var(--page-soft); }
+.hero .dates b { color: var(--page-ink); font-weight: 600; }
+.hero img { width: 100%; max-width: 100%; height: auto; display: block; }
+
+.short { background: var(--panel); color: var(--panel-ink); border-radius: 22px; padding: 20px 22px; }
+.short h2 { margin: 0 0 10px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; opacity: .9; }
+.short ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.short li { padding-left: 22px; position: relative; }
+.short li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 9px; height: 9px; border-radius: 50%; background: var(--vespa); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 6px; }
+nav.toc a { background: var(--chip); color: var(--chip-ink); text-decoration: none; font-size: 14px; font-weight: 500; padding: 7px 12px; border-radius: 999px; }
+
+section.card { background: var(--card); color: var(--card-ink); border-radius: 22px; padding: 22px 22px 20px; scroll-margin-top: 16px; min-width: 0; }
+section.card h2 { margin: 0 0 10px; font-size: 22px; line-height: 1.25; font-weight: 600; text-wrap: balance; }
+section.card h3 { margin: 18px 0 6px; font-size: 17px; font-weight: 600; color: var(--card-ink); }
+section.card p, section.card li { color: var(--card-soft); }
+section.card p { margin: 0 0 10px; max-width: 65ch; }
+section.card p:last-child { margin-bottom: 0; }
+section.card ul { margin: 0 0 10px; padding-left: 20px; display: grid; gap: 6px; }
+section.card strong { color: var(--card-ink); font-weight: 600; }
+.path { color: var(--card-ink); font-weight: 600; white-space: nowrap; }
+.quote { border-left: 3px solid var(--vespa); padding: 4px 0 4px 14px; margin: 12px 0; color: var(--card-ink); }
+.quote small { display: block; color: var(--card-soft); font-size: 14px; }
+
+.providers { display: grid; gap: 10px; margin-top: 4px; }
+.provider { border: 1px solid var(--card-line); border-radius: 14px; padding: 12px 14px; }
+.provider b { color: var(--card-ink); display: block; }
+.provider span { color: var(--card-soft); font-size: 15px; }
+
+.todo { background: var(--mark); color: var(--mark-ink); border-radius: 6px; padding: 0 5px; font-weight: 600; font-size: .92em; }
+
+.contact { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 4px; }
+.mail { font-size: 19px; font-weight: 600; color: var(--card-ink); user-select: all; }
+.btn { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 15px; padding: 9px 16px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center; }
+
+footer { color: var(--page-soft); font-size: 14px; padding-block: 8px; display: grid; gap: 4px; }
+footer a { color: var(--chip-ink); }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .brand span { display: none; }
+  .hero { grid-template-columns: minmax(0, 1fr) 128px; align-items: center; column-gap: 4px; }
+  .hero > div { display: contents; }
+  .hero h1 { grid-column: 1; grid-row: 1; margin: 0; }
+  .hero img { grid-column: 2; grid-row: 1; }
+  .hero p { grid-column: 1 / -1; }
+  .hero .dates { margin-top: 2px; }
+  section.card, .short { padding: 18px 16px; border-radius: 18px; }
+  section.card h2 { font-size: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.faq h2 { font-size: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="brand" href="https://apps.apple.com/th/app/id6449095611">ไทยไดรฟ์ <span>· สอบใบขับขี่</span></a>
+  <nav class="lang" aria-label="ภาษา">
+    <a href="../support.html" lang="en">English</a>
+    <a href="support.html" aria-current="page" lang="th">ภาษาไทย</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>ความช่วยเหลือ</h1>
+    <p>คำตอบสำหรับแอป Thai Drive บน iPhone และ iPad ทั้ง <strong>สอบใบขับขี่ ไทยไดรฟ์</strong> (ภาษาไทย) และ <strong>Thailand Driver License</strong> (ภาษาอังกฤษ)</p>
+    <p class="dates">ปรับปรุงล่าสุด <b>19 พฤศจิกายน 2569</b> · เวอร์ชัน 3.0</p>
+  </div>
+  <img src="../assets/heroine-phone.webp" width="560" height="483" alt="นางเอกของไทยไดรฟ์นั่งบนสกูตเตอร์สีเหลืองและดูโทรศัพท์">
+</div>
+
+<aside class="short" aria-labelledby="mail-h">
+  <h2 id="mail-h">ส่งอีเมลถึงเรา</h2>
+  <ul>
+    <li><b>thaidriveapp@gmail.com</b></li>
+    <li>โปรดระบุว่าใช้แอปภาษาไทยหรือภาษาอังกฤษ เวอร์ชันแอป (ดูได้ในการตั้งค่าของแอป) และรุ่น iPhone หรือ iPad</li>
+    <li>อธิบายสิ่งที่เกิดขึ้น ภาพหน้าจอจะช่วยได้มาก</li>
+  </ul>
+</aside>
+
+<nav class="toc" aria-label="สารบัญ">
+  <a href="#report">แจ้งปัญหาข้อสอบ</a>
+  <a href="#restore">กู้คืนพรีเมียม</a>
+  <a href="#subscription">พรีเมียมรายสัปดาห์</a>
+  <a href="#ai">ผู้ช่วย AI</a>
+  <a href="#progress">ความคืบหน้าและสถิติ</a>
+  <a href="#reminders">การแจ้งเตือน</a>
+  <a href="#contact">ติดต่อ</a>
+</nav>
+
+<section class="card faq" id="report">
+  <h2>โจทย์หรือคำตอบดูไม่ถูกต้อง</h2>
+  <p>แตะ <strong>แจ้งปัญหาเกี่ยวกับข้อสอบ</strong> ใต้คำถาม แอปจะเตรียมอีเมลที่มีรหัสข้อสอบเพื่อให้เราค้นหาได้ ระบุสิ่งที่ดูผิดแล้วส่ง คุณเป็นผู้ตัดสินใจว่าจะส่งแบบร่างหรือไม่</p>
+</section>
+
+<section class="card faq" id="restore">
+  <h2>พรีเมียมหายไปหลังติดตั้งใหม่หรือเปลี่ยนเครื่อง</h2>
+  <p>เปิดหน้าพรีเมียมแล้วแตะ <strong>กู้คืนการซื้อ</strong> โดยใช้บัญชี Apple เดียวกับที่ใช้ซื้อ ทั้งแบบตลอดชีพและพรีเมียมรายสัปดาห์กู้คืนได้ด้วยวิธีนี้</p>
+</section>
+
+<section class="card faq" id="subscription">
+  <h2>ยกเลิกพรีเมียมรายสัปดาห์หรือขอเงินคืน</h2>
+  <p>พรีเมียมรายสัปดาห์ต่ออายุอัตโนมัติจนกว่าคุณจะยกเลิก หากต้องการยกเลิก ให้เปิด <span class="path">การตั้งค่า iOS → ชื่อของคุณ → การสมัครรับ</span> เลือก Thai Drive แล้วแตะยกเลิกการสมัครรับ โปรดยกเลิกอย่างน้อย 24 ชั่วโมงก่อนวันต่ออายุเพื่อไม่ให้ถูกเรียกเก็บเงินรอบถัดไป</p>
+  <p>Apple เป็นผู้ดำเนินการชำระเงินทั้งหมด การขอเงินคืนจึงทำผ่าน Apple ที่ <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> เราไม่สามารถดูหรือคืนเงินการชำระของคุณเองได้</p>
+</section>
+
+<section class="card faq" id="ai">
+  <h2>ผู้ช่วย AI รูปภาพ และการอนุญาต</h2>
+  <p>คำอธิบายจาก AI และการสแกนป้ายเป็นตัวเลือกเสริม แอปจะถามก่อนแชร์ข้อมูลใด ๆ กับบริการ AI หากต้องการถอนความยินยอม ให้เปิด <span class="path">การตั้งค่า → ความเป็นส่วนตัวและข้อมูล</span> ใน Thai Drive แล้วแตะ <strong>ถอนความยินยอม</strong></p>
+  <p>การสแกนจะเก็บในประวัติผู้ช่วย AI บนอุปกรณ์ และคุณลบได้ที่นั่น หากกล้องหรือคลังรูปภาพไม่เปิด ให้อนุญาตการเข้าถึงสำหรับ Thai Drive ใน <span class="path">การตั้งค่า iOS → ความเป็นส่วนตัวและความปลอดภัย</span></p>
+</section>
+
+<section class="card faq" id="progress">
+  <h2>ความคืบหน้าและสถิติ</h2>
+  <p>คำตอบ สถิติต่อเนื่อง และสถิติการเรียนเก็บไว้ในอุปกรณ์ของคุณ Thai Drive ไม่มีระบบบัญชี หากต้องการเริ่มใหม่ ให้เปิดการตั้งค่าในแอปแล้วแตะ <strong>ล้างสถิติการเรียน</strong></p>
+</section>
+
+<section class="card faq" id="reminders">
+  <h2>ไม่ได้รับการเตือนวันสอบ</h2>
+  <p>ตั้งวันสอบในแอป แล้วตรวจสอบว่าอนุญาตการแจ้งเตือนแล้วที่ <span class="path">การตั้งค่า iOS → การแจ้งเตือน → Thai Drive</span> โหมดโฟกัสอาจทำให้การแจ้งเตือนไม่แสดงด้วย</p>
+</section>
+
+<section class="card" id="contact">
+  <h2>ติดต่อ</h2>
+  <p>Thai Drive พัฒนาและเผยแพร่โดย Vladimir Artiukhov</p>
+  <div class="contact">
+    <span class="mail">thaidriveapp@gmail.com</span>
+    <a class="btn" href="mailto:thaidriveapp@gmail.com">ส่งอีเมลถึงเรา</a>
+  </div>
+  <p style="margin-top:12px">วิธีที่เราดูแลข้อมูลของคุณ: <a href="index.html">นโยบายความเป็นส่วนตัว</a></p>
+</section>
+
+<footer>
+  <span>Thai Drive · <a href="https://apps.apple.com/th/app/id6449095611">สอบใบขับขี่ ไทยไดรฟ์</a> · <a href="https://apps.apple.com/app/id6446759635">Thailand Driver License</a></span>
+</footer>
+
+</div>
+</body>
+</html>
