@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>นโยบายความเป็นส่วนตัว ไทยไดรฟ์</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="วิธีที่ไทยไดรฟ์ดูแลข้อมูลของคุณ: ความคืบหน้าอยู่ในอุปกรณ์ ฟีเจอร์ AI ส่งเฉพาะสิ่งที่คุณเลือกส่งหลังจากอนุญาต Apple ดูแลการชำระเงิน และไม่มีโฆษณาหรือการติดตาม">
+<link rel="alternate" hreflang="en" href="https://artypeace.github.io/ThaiDrive/">
+<link rel="alternate" hreflang="th" href="https://artypeace.github.io/ThaiDrive/th/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one reading column on lavender; a short heroine header, a "the short version" panel, then dark text cards per topic. */
+:root {
+  --page: #ECEAFB;          /* app lavender ground */
+  --page-ink: #261A3D;      /* headings on the ground */
+  --page-soft: #5A5470;     /* secondary text on the ground */
+  --card: #231B36;          /* dark text cards */
+  --card-ink: #EAE7F2;      /* text on cards */
+  --card-soft: #B9B3CC;     /* secondary text on cards */
+  --card-line: #3A3053;
+  --accent: #6C68E2;        /* brand lavender action */
+  --accent-ink: #FFFFFF;
+  --accent-on-card: #A9A6FF;
+  --panel: #6C68E2;         /* summary panel */
+  --panel-ink: #FFFFFF;
+  --vespa: #FFC928;         /* the heroine's scooter */
+  --chip: #FFFFFF;
+  --chip-ink: #3F3A8F;
+  --mark: #FFE7A3;
+  --mark-ink: #4A3600;
+  --font: "Anuphan", "Noto Sans Thai", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #141020; --page-ink: #EAE7F2; --page-soft: #A9A3BD;
+    --card: #221B33; --card-ink: #EAE7F2; --card-soft: #B3ADC6; --card-line: #382E50;
+    --accent: #FFC928; --accent-ink: #1A1606; --accent-on-card: #B8B5FF; --panel: #4E49B8; --panel-ink: #FFFFFF;
+    --chip: #2A2240; --chip-ink: #D6D4FF; --mark: #5A4500; --mark-ink: #FFE7A3;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #141020; --page-ink: #EAE7F2; --page-soft: #A9A3BD;
+  --card: #221B33; --card-ink: #EAE7F2; --card-soft: #B3ADC6; --card-line: #382E50;
+  --accent: #FFC928; --accent-ink: #1A1606; --accent-on-card: #B8B5FF; --panel: #4E49B8; --panel-ink: #FFFFFF;
+  --chip: #2A2240; --chip-ink: #D6D4FF; --mark: #5A4500; --mark-ink: #FFE7A3;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--page); color: var(--page-ink);
+  font-family: var(--font); font-size: 17px; line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.wrap { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
+a { color: var(--accent-on-card); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--vespa); outline-offset: 2px; border-radius: 6px; }
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 18px 0; }
+.brand { font-weight: 700; font-size: 15px; letter-spacing: .02em; color: var(--page-ink); text-decoration: none; }
+.brand span { color: var(--page-soft); font-weight: 500; }
+.lang { display: inline-flex; background: var(--chip); border-radius: 999px; padding: 4px; gap: 2px; }
+.lang a { white-space: nowrap; color: var(--chip-ink); text-decoration: none; font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; min-height: 32px; display: inline-flex; align-items: center; }
+.lang a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 210px; align-items: end; gap: 8px; padding-block: 10px 0; }
+.hero h1 { font-size: clamp(34px, 7vw, 50px); line-height: 1.05; margin: 0 0 12px; font-weight: 700; text-wrap: balance; letter-spacing: -.01em; }
+.hero p { margin: 0; color: var(--page-soft); max-width: 46ch; }
+.hero .dates { margin-top: 14px; font-size: 14px; color: var(--page-soft); }
+.hero .dates b { color: var(--page-ink); font-weight: 600; }
+.hero img { width: 100%; max-width: 100%; height: auto; display: block; }
+
+.short { background: var(--panel); color: var(--panel-ink); border-radius: 22px; padding: 20px 22px; }
+.short h2 { margin: 0 0 10px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; opacity: .9; }
+.short ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.short li { padding-left: 22px; position: relative; }
+.short li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 9px; height: 9px; border-radius: 50%; background: var(--vespa); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 6px; }
+nav.toc a { background: var(--chip); color: var(--chip-ink); text-decoration: none; font-size: 14px; font-weight: 500; padding: 7px 12px; border-radius: 999px; }
+
+section.card { background: var(--card); color: var(--card-ink); border-radius: 22px; padding: 22px 22px 20px; scroll-margin-top: 16px; min-width: 0; }
+section.card h2 { margin: 0 0 10px; font-size: 22px; line-height: 1.25; font-weight: 600; text-wrap: balance; }
+section.card h3 { margin: 18px 0 6px; font-size: 17px; font-weight: 600; color: var(--card-ink); }
+section.card p, section.card li { color: var(--card-soft); }
+section.card p { margin: 0 0 10px; max-width: 65ch; }
+section.card p:last-child { margin-bottom: 0; }
+section.card ul { margin: 0 0 10px; padding-left: 20px; display: grid; gap: 6px; }
+section.card strong { color: var(--card-ink); font-weight: 600; }
+.path { color: var(--card-ink); font-weight: 600; white-space: nowrap; }
+.quote { border-left: 3px solid var(--vespa); padding: 4px 0 4px 14px; margin: 12px 0; color: var(--card-ink); }
+.quote small { display: block; color: var(--card-soft); font-size: 14px; }
+
+.providers { display: grid; gap: 10px; margin-top: 4px; }
+.provider { border: 1px solid var(--card-line); border-radius: 14px; padding: 12px 14px; }
+.provider b { color: var(--card-ink); display: block; }
+.provider span { color: var(--card-soft); font-size: 15px; }
+
+.todo { background: var(--mark); color: var(--mark-ink); border-radius: 6px; padding: 0 5px; font-weight: 600; font-size: .92em; }
+
+.contact { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 4px; }
+.mail { font-size: 19px; font-weight: 600; color: var(--card-ink); user-select: all; }
+.btn { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 15px; padding: 9px 16px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center; }
+
+footer { color: var(--page-soft); font-size: 14px; padding-block: 8px; display: grid; gap: 4px; }
+footer a { color: var(--chip-ink); }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .brand span { display: none; }
+  .hero { grid-template-columns: minmax(0, 1fr) 128px; align-items: center; column-gap: 4px; }
+  .hero > div { display: contents; }
+  .hero h1 { grid-column: 1; grid-row: 1; margin: 0; }
+  .hero img { grid-column: 2; grid-row: 1; }
+  .hero p { grid-column: 1 / -1; }
+  .hero .dates { margin-top: 2px; }
+  section.card, .short { padding: 18px 16px; border-radius: 18px; }
+  section.card h2 { font-size: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="brand" href="https://apps.apple.com/th/app/id6449095611">ไทยไดรฟ์ <span>· สอบใบขับขี่</span></a>
+  <nav class="lang" aria-label="ภาษา">
+    <a href="../index.html" lang="en">English</a>
+    <a href="index.html" aria-current="page" lang="th">ภาษาไทย</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>นโยบายความเป็นส่วนตัว</h1>
+    <p>สำหรับแอป Thai Drive บน iPhone และ iPad ทั้ง <strong>สอบใบขับขี่ ไทยไดรฟ์</strong> (ภาษาไทย) และ <strong>Thailand Driver License</strong> (ภาษาอังกฤษ) Thai Drive เป็นแอปเตรียมสอบอิสระ ไม่ได้สังกัดกรมการขนส่งทางบก</p>
+    <p class="dates">ปรับปรุงล่าสุด <b>19 พฤศจิกายน 2569</b> · ใช้กับเวอร์ชัน 3.0 ขึ้นไป</p>
+  </div>
+  <img src="../assets/heroine-phone.webp" width="560" height="483" alt="นางเอกของไทยไดรฟ์นั่งบนสกูตเตอร์สีเหลืองและดูโทรศัพท์">
+</div>
+
+<aside class="short" aria-labelledby="short-h">
+  <h2 id="short-h">สรุปสั้น ๆ</h2>
+  <ul>
+    <li>ไม่มีบัญชีผู้ใช้และไม่ต้องลงชื่อเข้าใช้ ความคืบหน้าการฝึกอยู่ในอุปกรณ์ของคุณ</li>
+    <li>ฟีเจอร์ AI เป็นตัวเลือกเสริม รูปหรือโจทย์จะถูกส่งให้บริการ AI เฉพาะเมื่อคุณกดส่งเอง และหลังจากคุณกดอนุญาตแล้วเท่านั้น</li>
+    <li>คุณถอนความยินยอมได้ทุกเมื่อที่ <b>การตั้งค่า → ความเป็นส่วนตัวและข้อมูล</b></li>
+    <li>Apple เป็นผู้ดำเนินการชำระเงินทั้งหมด เราไม่เห็นข้อมูลบัตรหรือบัญชี Apple ของคุณ</li>
+    <li>ไม่มีโฆษณา ไม่มีการติดตาม และเราไม่ขายข้อมูลของคุณ</li>
+  </ul>
+</aside>
+
+<nav class="toc" aria-label="สารบัญ">
+  <a href="#device">ในอุปกรณ์ของคุณ</a>
+  <a href="#ai">ฟีเจอร์ AI</a>
+  <a href="#purchases">การซื้อ</a>
+  <a href="#server">เซิร์ฟเวอร์ของเรา</a>
+  <a href="#providers">ผู้ให้บริการ</a>
+  <a href="#ads">โฆษณาและการติดตาม</a>
+  <a href="#retention">การเก็บและลบข้อมูล</a>
+  <a href="#children">เด็ก</a>
+  <a href="#contact">ติดต่อ</a>
+</nav>
+
+<section class="card" id="device">
+  <h2>ข้อมูลที่อยู่ในอุปกรณ์ของคุณ</h2>
+  <p>Thai Drive ไม่มีระบบบัญชีผู้ใช้ ข้อมูลต่อไปนี้อยู่ใน iPhone หรือ iPad ของคุณและไม่ได้ส่งมาให้เรา</p>
+  <ul>
+    <li>คำตอบที่ฝึก คำถามที่บันทึกไว้ ข้อที่ตอบผิด สถิติต่อเนื่อง และสถิติการเรียน</li>
+    <li>วันสอบ สำนักงานขนส่งที่เลือก และรายการเตรียมเอกสาร</li>
+    <li>การตั้งค่าแอป รวมถึงการเลือกอนุญาตหรือไม่อนุญาตให้ใช้ AI</li>
+    <li>ประวัติผู้ช่วย AI ได้แก่ รูปป้ายที่สแกนและผลลัพธ์</li>
+  </ul>
+  <p><strong>การแจ้งเตือน</strong> การเตือนวันสอบ การนับถอยหลังก่อนสอบ และการเตือนตอนเย็นเพื่อรักษาสถิติต่อเนื่อง ตั้งค่าบนอุปกรณ์ด้วยการแจ้งเตือนของ iOS ระบบจะขออนุญาตก่อน และคุณปิดการเตือนได้ในแอปหรือในการตั้งค่า iOS</p>
+  <p><strong>Apple Watch วิดเจ็ต และ Live Activity</strong> หากคุณใช้งาน สถิติต่อเนื่องและการนับถอยหลังจะส่งระหว่าง iPhone กับ Apple Watch ของคุณโดยตรงผ่านการเชื่อมต่อของ Apple และแสดงในวิดเจ็ตบนอุปกรณ์ ไม่ผ่านเซิร์ฟเวอร์ของเรา</p>
+  <p><strong>การแชร์สถิติต่อเนื่อง</strong> การ์ดสถิติสร้างขึ้นในอุปกรณ์ และจะออกจากแอปก็ต่อเมื่อคุณแชร์เองผ่านเมนูแชร์ของ iOS</p>
+  <p><strong>กล้องและรูปภาพ</strong> แอปจะขอสิทธิ์ใช้กล้องหรือคลังรูปภาพเฉพาะเมื่อคุณเลือกสแกนป้ายหรือโจทย์ฝึก</p>
+  <p>คุณล้างสถิติการเรียนได้ในการตั้งค่า และลบการสแกนได้ในประวัติผู้ช่วย AI การลบแอปจะลบข้อมูลทั้งหมดที่แอปเก็บไว้ในอุปกรณ์</p>
+</section>
+
+<section class="card" id="ai">
+  <h2>ฟีเจอร์ AI และการอนุญาตของคุณ</h2>
+  <p>Thai Drive ใช้งานได้ครบโดยไม่ต้องใช้ AI การค้นหาโจทย์ฝึกจากรูปทำงานในอุปกรณ์ ก่อนส่งข้อมูลใด ๆ ให้บริการ AI แอปจะถามคุณก่อน</p>
+  <div class="quote">“อนุญาตให้ AI อธิบายหรือไม่”<small>ผู้ให้บริการ AI ภายนอกจะได้รับรูปที่คุณเลือกส่ง รวมถึงโจทย์และคำตอบที่คุณขอให้อธิบาย</small></div>
+  <p>เมื่อคุณกดอนุญาต บริการ AI จะได้รับเฉพาะสิ่งที่คุณเลือกส่ง</p>
+  <h3>การสแกนป้ายจราจร</h3>
+  <p>รูปที่คุณถ่ายหรือเลือกจะถูกลดขนาดและส่งผ่าน HTTPS ผ่านเซิร์ฟเวอร์ของเราไปยัง OpenAI เพื่อระบุป้าย เซิร์ฟเวอร์ของเราไม่เก็บรูปนั้น รูปและผลลัพธ์บันทึกในประวัติบนอุปกรณ์ของคุณ โปรดถ่ายเฉพาะป้าย หลีกเลี่ยงใบหน้า ป้ายทะเบียนรถ และข้อมูลส่วนบุคคลอื่น</p>
+  <h3>คำอธิบาย “ทำไมฉันตอบผิด”</h3>
+  <p>แอปส่งรหัสข้อสอบและตัวเลือกที่คุณตอบ เซิร์ฟเวอร์ของเราเพิ่มโจทย์ คำตอบที่ถูกต้อง และกฎที่ตรวจสอบแล้ว จากนั้นส่งให้ OpenAI โดย OpenAI ไม่ได้รับข้อมูลการซื้อหรือข้อมูลที่ระบุตัวคุณ</p>
+  <h3>โจทย์ฝึกจากรูป</h3>
+  <p>หากคุณเลือกให้ AI วิเคราะห์ รูปที่ลดขนาดแล้วจะถูกส่งผ่านเซิร์ฟเวอร์ของเราไปยัง OpenAI โปรดให้มีเฉพาะโจทย์ ตัวเลือก และภาพประกอบ เซิร์ฟเวอร์เก็บค่าแฮชของรูปและคำตอบไว้เพื่อไม่ต้องส่งรูปเดิมซ้ำ โดยไม่เก็บตัวรูป</p>
+  <h3>การถอนความยินยอม</h3>
+  <p>เปิด <span class="path">การตั้งค่า → ความเป็นส่วนตัวและข้อมูล</span> ใน Thai Drive แล้วแตะ <strong>ถอนความยินยอม</strong> หลังจากนั้นจะไม่มีข้อมูลใดส่งไปยังบริการ AI และแอปจะถามอีกครั้งก่อนแชร์ข้อมูล</p>
+</section>
+
+<section class="card" id="purchases">
+  <h2>พรีเมียม: ตลอดชีพและรายสัปดาห์</h2>
+  <p>Thai Drive Premium มีแบบ <strong>ตลอดชีพ</strong> ซึ่งซื้อครั้งเดียว และ <strong>พรีเมียมรายสัปดาห์</strong> ซึ่งเป็นการสมัครรับที่ต่ออายุอัตโนมัติ Apple ดำเนินการชำระเงินทั้งหมดผ่านบัญชี Apple ของคุณ เราไม่ได้รับชื่อ อีเมล หมายเลขบัตร หรือที่อยู่สำหรับเรียกเก็บเงินของคุณ</p>
+  <p>แอปตรวจสอบการซื้อด้วย StoreKit ของ Apple บนอุปกรณ์ คุณกู้คืนการซื้อได้ที่หน้าพรีเมียม พรีเมียมรายสัปดาห์จะต่ออายุอัตโนมัติจนกว่าคุณจะยกเลิก คุณจัดการหรือยกเลิกได้ที่ <span class="path">การตั้งค่า iOS → ชื่อของคุณ → การสมัครรับ</span></p>
+  <p><strong>เงื่อนไขการใช้งาน</strong> การใช้ Thai Drive รวมถึงการซื้อและการสมัครรับ อยู่ภายใต้ <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">ข้อตกลงสิทธิ์การใช้งานแอปพลิเคชันมาตรฐานของ Apple (EULA)</a> และ <a href="https://www.apple.com/legal/privacy/th/">นโยบายความเป็นส่วนตัวของ Apple</a></p>
+</section>
+
+<section class="card" id="server">
+  <h2>ข้อมูลที่เซิร์ฟเวอร์ของเราบันทึก</h2>
+  <p>คำอธิบายจาก AI มีสิทธิ์ใช้ฟรีและมีขีดจำกัดการใช้งาน เพื่อให้ทำงานได้โดยไม่ต้องมีบัญชี แอปจะส่งหลักฐานที่ Apple ลงนามว่าแอปนี้ดาวน์โหลดจาก App Store ให้เซิร์ฟเวอร์ของเรา หากคุณมีพรีเมียม แอปจะส่งหลักฐานการซื้อที่ Apple ลงนามด้วย เซิร์ฟเวอร์ตรวจสอบกับ Apple และเก็บข้อมูลต่อไปนี้</p>
+  <ul>
+    <li>รหัสแทนตัวตน ซึ่งเป็นค่าแฮชทางเดียวของรหัสธุรกรรมแอปจาก Apple ไม่ใช่ชื่อหรือบัญชี Apple ของคุณ</li>
+    <li>เครดิตคำอธิบายฟรีและที่ซื้อที่เหลืออยู่ และจำนวนคำขอ AI ที่ใช้ในวันนั้น</li>
+    <li>คำอธิบายและคำตอบจากรูปที่สร้างเสร็จแล้ว เพื่อไม่ให้คิดเครดิตหรือส่งคำขอเดิมไปยัง OpenAI ซ้ำ</li>
+    <li>หากคุณซื้อเครดิตคำอธิบาย จะมีบันทึกการซื้อและการแจ้งคืนเงินที่ Apple ส่งให้เรา</li>
+  </ul>
+  <p><strong>การป้องกันการใช้งานในทางที่ผิด</strong> บริการสแกนป้ายเก็บค่าแฮชแบบใช้กุญแจของที่อยู่เครือข่ายและจำนวนคำขอในช่วงหนึ่งนาที บันทึกที่มีอายุเกินหนึ่งชั่วโมงจะถูกลบ</p>
+</section>
+
+<section class="card" id="providers">
+  <h2>ผู้ให้บริการ</h2>
+  <div class="providers">
+    <div class="provider"><b>Apple</b><span>การเผยแพร่แอป การชำระเงิน การสมัครรับ และการตรวจสอบการซื้อ</span></div>
+    <div class="provider"><b>Supabase</b><span>ให้บริการฟังก์ชันเซิร์ฟเวอร์และฐานข้อมูลในภูมิภาคสิงคโปร์ และอาจเก็บบันทึกการให้บริการตามปกติ</span></div>
+    <div class="provider"><b>OpenAI</b><span>ระบุป้ายและเขียนคำอธิบาย เราส่งคำขอโดยปิดการจัดเก็บ OpenAI อาจเก็บบันทึกเพื่อตรวจสอบการใช้งานในทางที่ผิดได้นานสูงสุด 30 วัน โดยมีข้อยกเว้นตาม<a href="https://developers.openai.com/api/docs/guides/your-data">นโยบายข้อมูล API</a></span></div>
+  </div>
+  <p style="margin-top:12px">เราใช้ผู้ให้บริการเหล่านี้เพื่อให้ฟีเจอร์ที่อธิบายไว้ทำงานเท่านั้น เราไม่ขายหรือให้เช่าข้อมูลของคุณ</p>
+</section>
+
+<section class="card" id="ads">
+  <h2>ไม่มีโฆษณา ไม่มีการติดตาม</h2>
+  <p>Thai Drive ไม่แสดงโฆษณา และไม่มี SDK โฆษณาหรือ SDK วิเคราะห์การใช้งาน แอปไม่ติดตามคุณข้ามแอปหรือเว็บไซต์ของบริษัทอื่น และไม่ขอสิทธิ์ติดตาม</p>
+</section>
+
+<section class="card" id="retention">
+  <h2>การเก็บและการลบข้อมูล</h2>
+  <ul>
+    <li><strong>ในอุปกรณ์:</strong> เก็บไว้จนกว่าคุณจะล้างในแอปหรือลบแอป</li>
+    <li><strong>รูปที่ส่งให้ AI:</strong> ไม่เก็บบนเซิร์ฟเวอร์ของเรา บันทึกของผู้ให้บริการเป็นไปตามที่อธิบายข้างต้น</li>
+    <li><strong>ค่าแฮชของที่อยู่เครือข่าย:</strong> ลบหลังหนึ่งชั่วโมง</li>
+    <li><strong>เครดิต การใช้งาน และคำอธิบายที่บันทึกไว้:</strong> เก็บไว้ตลอดที่ Thai Drive ให้บริการคำอธิบายจาก AI เพราะเป็นยอดเครดิตฟรีและที่ซื้อของคุณ และทำให้เปิดคำตอบเดิมได้โดยไม่ใช้เครดิตซ้ำ ตัวนับคำขอรายวันจะถูกเขียนทับทุกวัน เราลบข้อมูลเหล่านี้เมื่อคุณขอ</li>
+  </ul>
+  <p>หากต้องการทราบว่าเราเก็บข้อมูลใดไว้หรือขอให้ลบข้อมูลบนเซิร์ฟเวอร์ โปรดส่งอีเมลถึงเรา เนื่องจากไม่มีระบบบัญชี เราอาจขอใบเสร็จการซื้อหรือรายละเอียดที่คล้ายกันเพื่อค้นหาข้อมูล คุณอาจมีสิทธิ์เพิ่มเติมในการเข้าถึงหรือลบข้อมูลตามกฎหมายที่ใช้กับคุณ เช่น พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 และเราจะช่วยดำเนินการตามคำขอเหล่านั้น</p>
+</section>
+
+<section class="card" id="children">
+  <h2>เด็ก</h2>
+  <p>Thai Drive ทำขึ้นสำหรับผู้ที่เตรียมสอบใบขับขี่ในประเทศไทย และไม่ได้มุ่งเป้าไปที่เด็ก เราไม่เก็บข้อมูลส่วนบุคคลของเด็กโดยเจตนา หากคุณเชื่อว่าเด็กส่งข้อมูลมาให้เรา โปรดติดต่อเรา แล้วเราจะลบข้อมูลนั้น</p>
+</section>
+
+<section class="card" id="support">
+  <h2>การแจ้งปัญหาและอีเมลติดต่อ</h2>
+  <p>เมื่อคุณแจ้งปัญหาข้อสอบ แอปจะเตรียมแบบร่างอีเมลที่มีโจทย์ รหัสข้อสอบ เวอร์ชันแอป เหตุผล และความคิดเห็นของคุณ คุณเป็นผู้ตัดสินใจว่าจะส่งหรือไม่ เมื่อคุณส่งอีเมลถึงเรา เราจะได้รับที่อยู่อีเมลและข้อความของคุณ และใช้เพื่อตอบกลับเท่านั้น</p>
+</section>
+
+<section class="card" id="contact">
+  <h2>ติดต่อ</h2>
+  <p>Thai Drive พัฒนาและเผยแพร่โดย Vladimir Artiukhov ซึ่งเป็นผู้รับผิดชอบข้อมูลตามที่อธิบายในนโยบายนี้</p>
+  <div class="contact">
+    <span class="mail">thaidriveapp@gmail.com</span>
+    <a class="btn" href="mailto:thaidriveapp@gmail.com">ส่งอีเมลถึงเรา</a>
+  </div>
+  <p style="margin-top:12px">ความช่วยเหลือเกี่ยวกับแอป: <a href="https://artypeace.github.io/ThaiDrive/support">หน้าช่วยเหลือ</a></p>
+</section>
+
+<section class="card" id="changes">
+  <h2>การเปลี่ยนแปลงนโยบาย</h2>
+  <p>เราจะปรับปรุงหน้านี้และวันที่ด้านบนเมื่อแนวทางของเราเปลี่ยนแปลง ฉบับก่อนหน้าดูได้ใน<a href="https://github.com/artypeace/ThaiDrive/commits/main">ประวัติของหน้า</a></p>
+</section>
+
+<footer>
+  <span>Thai Drive · <a href="https://apps.apple.com/th/app/id6449095611">สอบใบขับขี่ ไทยไดรฟ์</a> · <a href="https://apps.apple.com/app/id6446759635">Thailand Driver License</a></span>
+</footer>
+
+</div>
+</body>
+</html>
